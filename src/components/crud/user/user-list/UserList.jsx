@@ -28,7 +28,11 @@ function UserList() {
 
   return (
     <>
-      <Button style={{ margin: "10px 0px 10px 0px" }} variant="secondary" onClick={handleOnBtnAddUserClick}>
+      <Button
+        style={{ margin: "10px 0px 10px 0px" }}
+        variant="secondary"
+        onClick={handleOnBtnAddUserClick}
+      >
         Add user
       </Button>
       <table
@@ -55,7 +59,11 @@ function UserList() {
               <td>{user.email}</td>
               <td>{user.phone}</td>
               <td>
-                <DropdownButton id="dropdown-basic-button" variant="secondary">
+                <DropdownButton
+                  title=""
+                  id="dropdown-basic-button"
+                  variant="secondary"
+                >
                   <Dropdown.Item onClick={() => handleOnBtnEditClick(user.id)}>
                     Edit
                   </Dropdown.Item>
