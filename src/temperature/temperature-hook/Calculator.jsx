@@ -9,7 +9,7 @@ function Calculator() {
   const handleTemperatureChange = useCallback((event) => {
     setTemperature(event.temperature);
     setScale(event.scale);
-  });
+  }, []);
 
   return (
     <div>

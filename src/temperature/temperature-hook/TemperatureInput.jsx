@@ -8,7 +8,7 @@ function TemperatureInput(props) {
 
   useEffect(() => {
     setTemperature(tryConvert2(props.temperature, props.scale, props.type));
-  }, [props.temperature, props.scale]);
+  }, [props.temperature, props.scale, props.type]);
 
   const handleChange = (e) => {
     setTemperature(e.target.value);
