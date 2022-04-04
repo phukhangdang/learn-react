@@ -1,5 +1,5 @@
 import { SET_USER, ADD_USER, EDIT_USER, DELETE_USER } from "./constants";
-import { key, getListUser, newGuid } from "./service";
+import { mergeUser } from "./service";
 
 export const initUser = {
   fullname: "",
@@ -11,19 +11,16 @@ const reducer = (state, action) => {
   switch (action.type) {
     case SET_USER:
       if (action.propName) {
-        state[action.propName] = action.payload;
-      } else {
+        return { ...state, [action.propName]: action.payload };
+      } else if (!action.payload) {
         state = null;
         return { ...initUser };
+      } else {
+        return { ...action.payload };
       }
-      return { ...state };
     case ADD_USER:
       const user = Object.assign({}, state);
-      user.id = newGuid();
-      const listUser = getListUser();
-      listUser.push(user);
-      const listUserJSON = JSON.stringify(listUser);
-      localStorage.setItem(key, listUserJSON);
+      mergeUser(user);
       return { ...state };
     case EDIT_USER:
       break;

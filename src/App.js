@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./home-page/HomePage";
-import { default as CalculatorComponent } from "./temperature/temperature-component/Calculator.jsx";
-import { default as CalculatorHook } from "./temperature/temperature-hook/Calculator.jsx";
-import { UserEdit, UserList } from "./crud/user";
+import HomePage from "./components/home-page/HomePage";
+import { default as CalculatorComponent } from "./components/temperature/temperature-component/Calculator.jsx";
+import { default as CalculatorHook } from "./components/temperature/temperature-hook/Calculator.jsx";
+import { UserEdit, UserList } from "./components/crud/user";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       ></Route>
       <Route path="/temperature-hook" element={<CalculatorHook />}></Route>
       <Route path="/user-edit" element={<UserEdit />}></Route>
+      <Route path="/user-edit/:userId" element={<UserEdit />}></Route>
       <Route path="/user-list" element={<UserList />}></Route>
     </Routes>
   );

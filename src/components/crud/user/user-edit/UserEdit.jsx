@@ -1,15 +1,29 @@
-import React, { useReducer } from "react";
-import { reducer, initUser, addUser, setUser } from "../reducer";
+import React, { useReducer, useEffect } from "react";
+import { reducer, initUser, addUser, setUser, getUserById } from "../reducer";
+import { useNavigate, useParams } from "react-router-dom";
 
 function UserEdit() {
+  const params = useParams();
+  const navigate = useNavigate();
   const [user, dispatch] = useReducer(reducer, Object.assign({}, initUser));
+
+  useEffect(() => {
+    if (params.userId) {
+      const user = getUserById(params.userId);
+      dispatch(setUser(user));
+    }
+  }, []);
 
   const handleSubmit = () => {
     dispatch(addUser(user));
-    dispatch(setUser({}));
+    if (params.userId) {
+      setTimeout(() => {
+        navigate("/user-list");
+      }, 1000);
+    } else {
+      dispatch(setUser());
+    }
   };
-
-  console.log("re-render");
 
   return (
     <div>
