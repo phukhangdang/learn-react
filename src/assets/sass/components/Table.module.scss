@@ -1,0 +1,76 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+  }
+
+  tr,
+  th,
+  td {
+    text-align: left;
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    height: inherit;
+    min-height: inherit;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  tfoot,
+  tbody {
+    tr:last-child {
+      border-bottom: 0 !important;
+
+      th,
+      td {
+        border-bottom: 0 !important;
+      }
+    }
+  }
+
+  tfoot {
+    th,
+    td {
+      border-top: inherit;
+    }
+  }
+
+  &.tableRowBordered {
+    tr {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #b3b3b3;
+    }
+
+    tfoot {
+      th,
+      td {
+        border-top-width: 1px !important;
+      }
+    }
+  }
+
+  &.tableGreyHeader {
+    tr {
+      line-height: 2;
+    }
+
+    th {
+      background-color: #b3b3b3;
+      font-weight: 500;
+    }
+  }
+}

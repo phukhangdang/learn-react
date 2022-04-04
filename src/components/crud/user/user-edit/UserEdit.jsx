@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from "react";
 import { reducer, initUser, addUser, setUser, getUserById } from "../reducer";
 import { useNavigate, useParams } from "react-router-dom";
+import { Container, Row, Button } from "react-bootstrap";
 
 function UserEdit() {
   const params = useParams();
@@ -12,7 +13,7 @@ function UserEdit() {
       const user = getUserById(params.userId);
       dispatch(setUser(user));
     }
-  }, []);
+  }, [params.userId]);
 
   const handleSubmit = () => {
     dispatch(addUser(user));
@@ -26,9 +27,11 @@ function UserEdit() {
   };
 
   return (
-    <div>
-      <fieldset>
-        <legend>Fullname:</legend>
+    <Container>
+      <Row>
+        <label>Fullname:</label>
+      </Row>
+      <Row>
         <input
           name="fullname"
           value={user.fullname}
@@ -36,9 +39,11 @@ function UserEdit() {
             dispatch(setUser(event.target.value, "fullname"));
           }}
         />
-      </fieldset>
-      <fieldset>
-        <legend>Email:</legend>
+      </Row>
+      <Row>
+        <label>Email:</label>
+      </Row>
+      <Row>
         <input
           name="email"
           value={user.email}
@@ -46,9 +51,11 @@ function UserEdit() {
             dispatch(setUser(event.target.value, "email"));
           }}
         />
-      </fieldset>
-      <fieldset>
-        <legend>Phone:</legend>
+      </Row>
+      <Row>
+        <label>Phone:</label>
+      </Row>
+      <Row>
         <input
           name="phone"
           value={user.phone}
@@ -56,9 +63,13 @@ function UserEdit() {
             dispatch(setUser(event.target.value, "phone"));
           }}
         />
-      </fieldset>
-      <button onClick={handleSubmit}>Submit</button>
-    </div>
+      </Row>
+      <Row style={{ marginTop: "10px" }}>
+        <Button variant="secondary" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </Row>
+    </Container>
   );
 }
 

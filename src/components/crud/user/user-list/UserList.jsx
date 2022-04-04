@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
+import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import { getListUser, deleteUserById } from "../reducer";
+import styles from "../../../../assets/sass/Style.module.scss";
 
 function UserList() {
   const navigate = useNavigate();
@@ -24,16 +27,24 @@ function UserList() {
   };
 
   return (
-    <div>
-      <button onClick={handleOnBtnAddUserClick}>Add user</button>
-      <table>
+    <>
+      <Button style={{ margin: "10px 0px 10px 0px" }} variant="secondary" onClick={handleOnBtnAddUserClick}>
+        Add user
+      </Button>
+      <table
+        className={clsx(
+          styles.table,
+          styles.tableRowBordered,
+          styles.tableGreyHeader
+        )}
+      >
         <thead>
-          <tr>
+          <tr className={clsx(styles.bold)}>
             <th>Id</th>
             <th>Fullname</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Action</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -44,19 +55,22 @@ function UserList() {
               <td>{user.email}</td>
               <td>{user.phone}</td>
               <td>
-                <a href="#" onClick={() => handleOnBtnEditClick(user.id)}>
-                  Edit
-                </a>
-                <a href="#" onClick={() => handleOnBtnDeleteClick(user.id)}>
-                  Delete
-                </a>
+                <DropdownButton id="dropdown-basic-button" variant="secondary">
+                  <Dropdown.Item onClick={() => handleOnBtnEditClick(user.id)}>
+                    Edit
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => handleOnBtnDeleteClick(user.id)}
+                  >
+                    Delete
+                  </Dropdown.Item>
+                </DropdownButton>
               </td>
             </tr>
           ))}
         </tbody>
-        <tfoot></tfoot>
       </table>
-    </div>
+    </>
   );
 }
 

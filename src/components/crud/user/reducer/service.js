@@ -32,14 +32,14 @@ export const mergeUser = (user) => {
 
 export const getUserById = (id) => {
   const listUser = getListUser();
-  const user = listUser.find((x) => x.id == id);
+  const user = listUser.find((x) => x.id === id);
 
   return user;
 };
 
 export const deleteUserById = (id) => {
   const listUser = getListUser();
-  const userIndex = listUser.findIndex((x) => x.id == id);
+  const userIndex = listUser.findIndex((x) => x.id === id);
   listUser.splice(userIndex, 1);
   const listUserJSON = JSON.stringify(listUser);
   localStorage.setItem(key, listUserJSON);
@@ -48,7 +48,7 @@ export const deleteUserById = (id) => {
 };
 
 export function newGuid() {
-  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+  return ([1e7] + 1e3 + 4e3 + 8e3 + 1e11).replace(/[018]/g, (c) =>
     (
       c ^
       (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
