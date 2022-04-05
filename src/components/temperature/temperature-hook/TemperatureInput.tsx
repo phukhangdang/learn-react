@@ -1,16 +1,27 @@
 import React, { useState, useEffect, memo } from "react";
-import { tryConvert2 } from "../Function.jsx";
-import * as constants from "../ScaleName.jsx";
+import { tryConvert2 } from "../Function";
+import * as constants from "../ScaleName";
 
-function TemperatureInput(props) {
-  const [scaleNames, setScaleNames] = useState(constants.SCALE_NAMES);
+type MenuItemProps = {
+  temperature: any;
+  scale: string
+  type: string
+  onTemperatureChange: any
+}
+
+function TemperatureInput(props: MenuItemProps) {
+  const [scaleNames, setScaleNames] = useState({});
   const [temperature, setTemperature] = useState("");
 
   useEffect(() => {
     setTemperature(tryConvert2(props.temperature, props.scale, props.type));
   }, [props.temperature, props.scale, props.type]);
+  
+  useEffect(() => {
+    setScaleNames(constants.SCALE_NAMES);
+  }, []);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setTemperature(e.target.value);
     props.onTemperatureChange({
       temperature: e.target.value,
@@ -20,7 +31,7 @@ function TemperatureInput(props) {
 
   return (
     <fieldset>
-      <legend>Enter temperature in {scaleNames[props.scale]}:</legend>
+      <legend>Enter temperature in {scaleNames ?? scaleNames[props.scale]}:</legend>
       <input value={temperature} onChange={handleChange} />
     </fieldset>
   );

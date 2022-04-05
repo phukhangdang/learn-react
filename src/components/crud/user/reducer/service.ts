@@ -1,10 +1,10 @@
 export const key = "user";
 
-export const getListUser = () => {
+export const getListUser = (): any => {
   var listUser = localStorage.getItem(key);
 
   if (!listUser) {
-    listUser = [];
+    return [];
   } else {
     listUser = JSON.parse(listUser);
   }
@@ -12,7 +12,7 @@ export const getListUser = () => {
   return listUser;
 };
 
-export const mergeUser = (user) => {
+export const mergeUser = (user: any) => {
   if (user.id) {
     deleteUserById(user.id);
     const listUser = getListUser();
@@ -30,16 +30,16 @@ export const mergeUser = (user) => {
   return user;
 };
 
-export const getUserById = (id) => {
+export const getUserById = (id: any) => {
   const listUser = getListUser();
-  const user = listUser.find((x) => x.id === id);
+  const user = listUser.find((x: any) => x.id === id);
 
   return user;
 };
 
-export const deleteUserById = (id) => {
+export const deleteUserById = (id: any) => {
   const listUser = getListUser();
-  const userIndex = listUser.findIndex((x) => x.id === id);
+  const userIndex = listUser.findIndex((x: any) => x.id === id);
   listUser.splice(userIndex, 1);
   const listUserJSON = JSON.stringify(listUser);
   localStorage.setItem(key, listUserJSON);
@@ -48,10 +48,9 @@ export const deleteUserById = (id) => {
 };
 
 export function newGuid() {
-  return ([1e7] + 1e3 + 4e3 + 8e3 + 1e11).replace(/[018]/g, (c) =>
-    (
-      c ^
-      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-    ).toString(16)
-  );
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0,
+      v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
 }

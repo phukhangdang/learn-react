@@ -1,4 +1,4 @@
-export function BoilingVerdict(props) {
+export function BoilingVerdict(props: any) {
   if (props.celsius >= 100) {
     return <p>The water would boil.</p>;
   }

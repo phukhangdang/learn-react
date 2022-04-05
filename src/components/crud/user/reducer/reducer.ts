@@ -7,7 +7,7 @@ export const initUser = {
   phone: "",
 };
 
-const reducer = (state, action) => {
+const reducer = (state: any, action: any) => {
   switch (action.type) {
     case SET_USER:
       if (action.propName) {

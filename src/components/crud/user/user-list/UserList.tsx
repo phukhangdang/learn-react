@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import { getListUser, deleteUserById } from "../reducer";
 import styles from "../../../../assets/sass/Style.module.scss";
+// import styles from "assets/sass/Style.module.scss";
 
 function UserList() {
   const navigate = useNavigate();
@@ -13,11 +14,11 @@ function UserList() {
     setListUser(getListUser());
   }, []);
 
-  const handleOnBtnEditClick = (id) => {
+  const handleOnBtnEditClick = (id: any) => {
     navigate(`/user-edit/${id}`);
   };
 
-  const handleOnBtnDeleteClick = (id) => {
+  const handleOnBtnDeleteClick = (id: any) => {
     deleteUserById(id);
     setListUser(getListUser());
   };
@@ -52,7 +53,7 @@ function UserList() {
           </tr>
         </thead>
         <tbody>
-          {listUser.map((user, index) => (
+          {listUser.map((user: any, index) => (
             <tr key={index}>
               <td>{user.id}</td>
               <td>{user.fullname}</td>

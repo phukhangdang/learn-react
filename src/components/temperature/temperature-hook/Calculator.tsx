@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
-import TemperatureInput from "./TemperatureInput.jsx";
-import { BoilingVerdict } from "../BoilingVerdict.jsx";
+import TemperatureInput from "./TemperatureInput";
+import { BoilingVerdict } from "../BoilingVerdict";
 
 function Calculator() {
   const [temperature, setTemperature] = useState("");

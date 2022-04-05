@@ -1,12 +1,12 @@
-export function toCelsius(fahrenheit) {
+export function toCelsius(fahrenheit: any) {
   return ((fahrenheit - 32) * 5) / 9;
 }
 
-export function toFahrenheit(celsius) {
+export function toFahrenheit(celsius: any) {
   return (celsius * 9) / 5 + 32;
 }
 
-export function tryConvert(temperature, convert) {
+export function tryConvert(temperature: any, convert: any) {
   const input = parseFloat(temperature);
   if (Number.isNaN(input)) {
     return "";
@@ -16,7 +16,7 @@ export function tryConvert(temperature, convert) {
   return rounded.toString();
 }
 
-export function tryConvert2(temperature, scale, type) {
+export function tryConvert2(temperature: any, scale: any, type: any) {
   var converter;
   if (scale === "c" && type === "f") {
     converter = toFahrenheit;
