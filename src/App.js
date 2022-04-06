@@ -1,7 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./components/home-page/HomePage.tsx";
-import { default as CalculatorHook } from "./components/temperature/temperature-hook/Calculator.tsx";
+import HomePage from "./view/home-page/HomePage";
+import { default as CalculatorHook } from "./components/temperature/temperature-hook/Calculator";
 import { UserEdit, UserList } from "./components/crud/user";
+import MyLayout from "./components/layout/MyLayout";
+import routes from "./routes";
+import "./fontawasome"
 
 function App() {
   return (
@@ -11,6 +14,13 @@ function App() {
       <Route path="/user-edit" element={<UserEdit />}></Route>
       <Route path="/user-edit/:userId" element={<UserEdit />}></Route>
       <Route path="/user-list" element={<UserList />}></Route>
+      {routes.map((route) => (
+        <Route
+          key={route.route}
+          path={route.route}
+          element={<MyLayout>{route.component}</MyLayout>}
+        ></Route>
+      ))}
     </Routes>
   );
 }

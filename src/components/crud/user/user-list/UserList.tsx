@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import { getListUser, deleteUserById } from "../reducer";
-import styles from "../../../../assets/sass/Style.module.scss";
-// import styles from "assets/sass/Style.module.scss";
+import "../../../../assets/sass/Table.scss";
 
 function UserList() {
   const navigate = useNavigate();
@@ -36,15 +35,9 @@ function UserList() {
       >
         Add user
       </Button>
-      <table
-        className={clsx(
-          styles.table,
-          styles.tableRowBordered,
-          styles.tableGreyHeader
-        )}
-      >
+      <table className={clsx("table", "tableRowBordered", "tableGreyHeader")}>
         <thead>
-          <tr className={clsx(styles.bold)}>
+          <tr className={clsx("bold")}>
             <th>Id</th>
             <th>Fullname</th>
             <th>Email</th>

@@ -1,4 +1,4 @@
-import logo from "../../logo.svg";
+import logo from "../../assets/image/logo.svg";
 import "./HomePage.css";
 
 function HomePage() {

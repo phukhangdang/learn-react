@@ -1,0 +1,42 @@
+.my-navbar-row {
+  margin: 20px 10px 10px 0px;
+  border-radius: 7px;
+  background-color: white;
+  display: block !important;
+}
+
+.my-navbar {
+  .my-navbar-title {
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .my-navbar-notification {
+    margin-right: 10px;
+  }
+
+  .my-navbar-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+
+  .my-navbar-user {
+    margin-left: 10px;
+
+    .my-navbar-user-account {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .my-navbar-user-role {
+      font-size: 12px;
+      line-height: 13px;
+      font-weight: 400;
+      display: block;
+    }
+  }
+}
