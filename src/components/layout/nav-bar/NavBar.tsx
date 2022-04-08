@@ -9,7 +9,7 @@ function NavBar(props: any) {
     <>
       <Navbar className="my-navbar">
         <Navbar.Brand className="my-navbar-title">
-          THÔNG TIN HỒ SƠ MỜI THẦU
+          This is title!!!
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">

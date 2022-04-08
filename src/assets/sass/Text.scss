@@ -1,0 +1,44 @@
+.my-text-with-label {
+  margin-left: 15px;
+  display: block;
+
+  .my-text-with-label-label {
+    color: #9b9b9b;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+  }
+
+  .my-text-with-label-content {
+    color: #3f8cff;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+
+.my-text-with-account {
+  margin-left: 15px;
+  display: block;
+
+  .my-text-with-account-label {
+    color: #9b9b9b;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+  }
+
+  .my-text-with-account-avatar {
+    margin-right: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+
+  .my-text-with-account-content {
+    color: #35455c;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}

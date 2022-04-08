@@ -4,14 +4,16 @@ import { Row } from "react-bootstrap";
 import "../../assets/sass/Card.scss";
 
 interface IProps {
-  children: any;
+  children?: any;
   title: string;
+  footer?: any;
+  style?: any;
 }
 
-function MyCard({ children, title }: IProps) {
+function MyCard({ children, title, footer, style }: IProps) {
   return (
     <>
-      <div className="my-card">
+      <div style={style} className="my-card">
         <Row className="my-card-title">
           {title}
           <FontAwesomeIcon
@@ -23,6 +25,7 @@ function MyCard({ children, title }: IProps) {
           <hr className="my-card-divider"></hr>
         </div>
         <Row className="my-card-content">{children}</Row>
+        {footer}
       </div>
     </>
   );
