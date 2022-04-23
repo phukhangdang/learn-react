@@ -13,6 +13,6 @@
     "strictNullChecks": true,
     "esModuleInterop": true
   },
-  "include": ["./src", "index.d.ts"],
+  "include": ["./src", "index.d.ts", "src/view/gantt-chart/dhtmlxgantt.d.ts"],
   "exclude": ["node_modules", "build"]
 }
