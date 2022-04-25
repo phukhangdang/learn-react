@@ -1,3 +1,24 @@
+/* eslint-disable no-eval */
+/* eslint-disable no-self-compare */
+/* eslint-disable array-callback-return */
+/* eslint-disable no-shadow-restricted-names */
+/* eslint-disable no-new-func */
+/* eslint-disable no-unreachable */
+/* eslint-disable no-loop-func */
+/* eslint-disable default-case */
+/* eslint-disable no-useless-concat */
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-mixed-operators */
+/* eslint-disable no-native-reassign */
+/* eslint-disable no-sequences */
+/* eslint-disable no-unused-vars */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-func-assign */
+/* eslint-disable no-redeclare */
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-undef */
 /*
 @license
 
@@ -185,7 +206,7 @@ return /******/ (function(modules) { // webpackBootstrap
     return s;
   }({
     1: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise) {
         var SomePromiseArray = Promise._SomePromiseArray;
@@ -209,7 +230,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     2: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var firstLineError;
 
@@ -401,7 +422,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     3: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL, tryConvertToPromise, debug) {
         var calledBind = false;
@@ -481,7 +502,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     4: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var old;
       if (typeof Promise !== "undefined") old = Promise;
@@ -502,7 +523,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./promise": 22
     }],
     5: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var cr = Object.create;
 
@@ -582,7 +603,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     6: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, apiRejection, debug) {
         var util = _dereq_("./util");
@@ -732,7 +753,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     7: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (NEXT_FILTER) {
         var util = _dereq_("./util");
@@ -787,7 +808,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     8: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise) {
         var longStackTraces = false;
@@ -876,7 +897,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     9: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, Context) {
         var getDomain = Promise._getDomain;
@@ -1897,7 +1918,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     10: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise) {
         function returner() {
@@ -1957,7 +1978,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     11: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL) {
         var PromiseReduce = Promise.reduce;
@@ -1987,7 +2008,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     12: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var es5 = _dereq_("./es5");
 
@@ -2119,7 +2140,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }],
     13: [function (_dereq_, module, exports) {
       var isES5 = function () {
-        "use strict";
+        
 
         return this === undefined;
       }();
@@ -2203,7 +2224,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {}],
     14: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL) {
         var PromiseMap = Promise.map;
@@ -2218,7 +2239,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     15: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, tryConvertToPromise, NEXT_FILTER) {
         var util = _dereq_("./util");
@@ -2363,7 +2384,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     16: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, apiRejection, INTERNAL, tryConvertToPromise, Proxyable, debug) {
         var errors = _dereq_("./errors");
@@ -2622,7 +2643,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     17: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, tryConvertToPromise, INTERNAL, async, getDomain) {
         var util = _dereq_("./util");
@@ -2655,7 +2676,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     18: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, apiRejection, tryConvertToPromise, INTERNAL, debug) {
         var getDomain = Promise._getDomain;
@@ -2845,7 +2866,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     19: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL, tryConvertToPromise, apiRejection, debug) {
         var util = _dereq_("./util");
@@ -2919,7 +2940,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     20: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var util = _dereq_("./util");
 
@@ -2992,7 +3013,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     21: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise) {
         var util = _dereq_("./util");
@@ -3057,7 +3078,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     22: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function () {
         var makeSelfResolutionError = function makeSelfResolutionError() {
@@ -4005,7 +4026,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     23: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL, tryConvertToPromise, apiRejection, Proxyable) {
         var util = _dereq_("./util");
@@ -4219,7 +4240,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     24: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL) {
         var THIS = {};
@@ -4424,7 +4445,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     25: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, tryConvertToPromise, apiRejection) {
         var util = _dereq_("./util");
@@ -4563,7 +4584,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     26: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       function arrayMove(src, srcIndex, dst, dstIndex, len) {
         for (var j = 0; j < len; ++j) {
@@ -4647,7 +4668,7 @@ return /******/ (function(modules) { // webpackBootstrap
       module.exports = Queue;
     }, {}],
     27: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL, tryConvertToPromise, apiRejection) {
         var util = _dereq_("./util");
@@ -4702,7 +4723,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     28: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, apiRejection, tryConvertToPromise, INTERNAL, debug) {
         var getDomain = Promise._getDomain;
@@ -4890,7 +4911,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     29: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var util = _dereq_("./util");
 
@@ -4962,7 +4983,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     30: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, debug) {
         var PromiseInspection = Promise.PromiseInspection;
@@ -5015,7 +5036,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     31: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, PromiseArray, apiRejection) {
         var util = _dereq_("./util");
@@ -5186,7 +5207,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     32: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise) {
         function PromiseInspection(promise) {
@@ -5294,7 +5315,7 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }, {}],
     33: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL) {
         var util = _dereq_("./util");
@@ -5394,7 +5415,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     34: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, INTERNAL, debug) {
         var util = _dereq_("./util");
@@ -5504,7 +5525,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     35: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       module.exports = function (Promise, apiRejection, tryConvertToPromise, createContext, INTERNAL, debug) {
         var util = _dereq_("./util");
@@ -5757,7 +5778,7 @@ return /******/ (function(modules) { // webpackBootstrap
       "./util": 36
     }],
     36: [function (_dereq_, module, exports) {
-      "use strict";
+      
 
       var es5 = _dereq_("./es5");
 
@@ -6401,7 +6422,7 @@ process.umask = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
-  "use strict";
+  
 
   if (global.setImmediate) {
     return;
@@ -7193,7 +7214,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 module.exports = function () {
@@ -7673,7 +7694,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var dateToStr = function (format, utc, gantt) {
@@ -7773,7 +7794,7 @@ exports.default = cspVersion;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var dateToStr = function (format, utc, gantt) {
@@ -8238,7 +8259,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var DurationFormatterNumeric = /** @class */ (function () {
@@ -8272,7 +8293,7 @@ exports.default = DurationFormatterNumeric;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var LinkFormatterSimple = /** @class */ (function () {
@@ -8335,7 +8356,7 @@ exports.default = LinkFormatterSimple;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function serialize(data) {
@@ -9195,7 +9216,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var eventable = __webpack_require__(/*! ../../utils/eventable */ "./sources/utils/eventable.js");
@@ -10232,7 +10253,7 @@ exports.DataProcessor = DataProcessor;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var helpers = __webpack_require__(/*! ../../utils/helpers */ "./sources/utils/helpers.js");
@@ -10493,7 +10514,7 @@ exports.default = DataProcessorEvents;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function extendGantt(gantt, dp) {
@@ -10580,7 +10601,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var utils = __webpack_require__(/*! ../../utils/utils */ "./sources/utils/utils.js");
@@ -18417,8 +18438,10 @@ var initializer = function () {
           var config = grid.$getConfig();
 
           if (column == "add") {
-            var mouseEvents = gantt.$services.getService("mouseEvents");
-            mouseEvents.callHandler("click", "gantt_add", grid.$grid, [e, config.root_id]);
+            // khangdp changes
+            console.log(config.root_id);
+            // var mouseEvents = gantt.$services.getService("mouseEvents");
+            // mouseEvents.callHandler("click", "gantt_add", grid.$grid, [e, config.root_id]);
             return;
           }
 
@@ -18455,10 +18478,12 @@ var initializer = function () {
         }, gantt), grid.$grid);
 
         this._mouseDelegates.delegate("click", "gantt_add", gantt.bind(function (e, id, trg) {
-          var config = grid.$getConfig();
-          if (config.readonly) return;
-          var item = {};
-          this.createTask(item, id ? id : gantt.config.root_id);
+          // khangdp changes
+          console.log(id ? id : gantt.config.root_id);
+          // var config = grid.$getConfig();
+          // if (config.readonly) return;
+          // var item = {};
+          // this.createTask(item, id ? id : gantt.config.root_id);
           return false;
         }, gantt), grid.$grid);
       },
@@ -19607,7 +19632,7 @@ var utils = __webpack_require__(/*! ../../../utils/utils */ "./sources/utils/uti
     domHelpers = __webpack_require__(/*! ../utils/dom_helpers */ "./sources/core/ui/utils/dom_helpers.js");
 
 var Cell = function () {
-  "use strict";
+  
 
   function Cell(parent, config, factory, gantt) {
     if (parent) {
@@ -19977,7 +20002,7 @@ var __extends = __webpack_require__(/*! ../../../utils/extends */ "./sources/uti
     Cell = __webpack_require__(/*! ./cell */ "./sources/core/ui/layout/cell.js");
 
 var Layout = function (_super) {
-  "use strict";
+  
 
   __extends(Layout, _super);
 
@@ -20827,7 +20852,7 @@ var __extends = __webpack_require__(/*! ../../../utils/extends */ "./sources/uti
     Cell = __webpack_require__(/*! ./cell */ "./sources/core/ui/layout/cell.js");
 
 var ScrollbarCell = function (_super) {
-  "use strict";
+  
 
   var SCROLL_MODIFIER_KEYS = ["altKey", "shiftKey", "metaKey"]; // it's no way to disable ctrl+wheel
 
@@ -21377,7 +21402,7 @@ var __extends = __webpack_require__(/*! ../../../utils/extends */ "./sources/uti
     Cell = __webpack_require__(/*! ./cell */ "./sources/core/ui/layout/cell.js");
 
 var ViewCell = function (_super) {
-  "use strict";
+  
 
   __extends(ViewCell, _super);
 
@@ -21505,7 +21530,7 @@ var __extends = __webpack_require__(/*! ../../../utils/extends */ "./sources/uti
     Cell = __webpack_require__(/*! ./cell */ "./sources/core/ui/layout/cell.js");
 
 var ViewLayout = function (_super) {
-  "use strict";
+  
 
   __extends(ViewLayout, _super);
 
@@ -24620,7 +24645,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var domHelpers = __webpack_require__(/*! ../../utils/dom_helpers */ "./sources/core/ui/utils/dom_helpers.js");
@@ -24846,7 +24871,7 @@ exports.ColumnsGridDnd = ColumnsGridDnd;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var column_grid_dnd_1 = __webpack_require__(/*! ./column_grid_dnd */ "./sources/core/ui/plugins/column_grid_dnd/column_grid_dnd.ts");
@@ -24862,7 +24887,7 @@ exports.default = column_grid_dnd_1.ColumnsGridDnd;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var SENSITIVITY = 20;
@@ -25078,7 +25103,7 @@ module.exports = null;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var env = __webpack_require__(/*! ../../../utils/env */ "./sources/utils/env.js");
@@ -28778,6 +28803,9 @@ var initLinksDND = function initLinksDND(timeline, gantt) {
   dnd.attachEvent("onDragEnd", gantt.bind(function () {
     var drag = getDndState();
 
+    // khangdp changes
+    console.log(drag);
+
     if (drag.link_source_id && drag.link_target_id && drag.link_source_id != drag.link_target_id) {
       var type = gantt._get_link_type(drag.link_from_start, drag.link_to_start);
 
@@ -29012,6 +29040,10 @@ var initializer = function () {
         function _delete_link_handler(id, e) {
           if (id && this.callEvent("onLinkDblClick", [id, e])) {
             var link = this.getLink(id);
+
+            // khangdp changes
+            console.log(link);
+
             if (this.isReadonly(link)) return;
             var title = "";
             var question = this.locale.labels.link + " " + this.templates.link_description(this.getLink(id)) + " " + this.locale.labels.confirm_link_deleting;
@@ -29613,6 +29645,9 @@ function createTaskDND(timeline, gantt) {
       return Math.ceil(duration / inMs[unit]);
     },
     _resize_progress: function _resize_progress(task, shift, drag) {
+      // khangdp changes
+      // console.log(task);
+
       var coords_x = this._drag_task_coords(task, drag);
 
       var config = timeline.$getConfig();
@@ -29969,7 +30004,10 @@ function createTaskDND(timeline, gantt) {
         var moveCount = 0;
 
         if (drag.mode === config.drag_mode.move) {
-          if (gantt.isSummaryTask(task) && config.drag_project || this._isMultiselect()) {
+          if (
+            (gantt.isSummaryTask(task) && config.drag_project) ||
+            this._isMultiselect()
+          ) {
             finalizingBulkMove = true;
             moveCount = Object.keys(dragMultiple).length;
           }
@@ -29978,7 +30016,12 @@ function createTaskDND(timeline, gantt) {
         var doFinalize = function doFinalize() {
           if (finalizingBulkMove) {
             for (var i in dragMultiple) {
-              this._finalize_mouse_up(dragMultiple[i].id, config, dragMultiple[i], e);
+              this._finalize_mouse_up(
+                dragMultiple[i].id,
+                config,
+                dragMultiple[i],
+                e
+              );
             }
           }
 
@@ -29987,11 +30030,18 @@ function createTaskDND(timeline, gantt) {
 
         if (finalizingBulkMove && moveCount > 10) {
           // 10 - arbitrary threshold for bulk dnd at which we start doing complete repaint to refresh
-          gantt.batchUpdate(function () {
-            doFinalize.call(this);
-          }.bind(this));
+          gantt.batchUpdate(
+            function () {
+              doFinalize.call(this);
+            }.bind(this)
+          );
         } else {
           doFinalize.call(this);
+        }
+
+        // khangdp changes
+        if (drag.mode === config.drag_mode.progress) {
+          console.log(task);
         }
       }
 
@@ -34735,7 +34785,7 @@ module.exports = WorkTimeCalendarMerger;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var DateDurationCache = /** @class */ (function () {
@@ -34820,7 +34870,7 @@ exports.DateDurationCache = DateDurationCache;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var workunit_map_cache_1 = __webpack_require__(/*! ./workunit_map_cache */ "./sources/core/worktime/strategy/work_unit_cache/workunit_map_cache.ts");
@@ -34849,7 +34899,7 @@ exports.createCacheObject = createCacheObject;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var LargerUnitsCache = /** @class */ (function () {
@@ -34909,7 +34959,7 @@ exports.LargerUnitsCache = LargerUnitsCache;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var WorkUnitsMapCache = /** @class */ (function () {
@@ -34963,7 +35013,7 @@ exports.WorkUnitsMapCache = WorkUnitsMapCache;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var WorkUnitsObjectCache = /** @class */ (function () {
@@ -35345,7 +35395,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var extensions_gpl_1 = __webpack_require__(/*! ./ext/extensions_gpl */ "./sources/ext/extensions_gpl.ts");
@@ -35365,7 +35415,7 @@ exports.default = gantt;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var domHelpers = __webpack_require__(/*! ../../core/ui/utils/dom_helpers */ "./sources/core/ui/utils/dom_helpers.js");
@@ -35490,7 +35540,7 @@ exports.EventsManager = EventsManager;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -35550,7 +35600,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var eventable = __webpack_require__(/*! ../../utils/eventable */ "./sources/utils/eventable.js");
@@ -35759,7 +35809,7 @@ exports.SelectedRegion = SelectedRegion;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var EventsManager = /** @class */ (function () {
@@ -35964,7 +36014,7 @@ exports.EventsManager = EventsManager;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var eventsManager_1 = __webpack_require__(/*! ./eventsManager */ "./sources/ext/drag_timeline/eventsManager.ts");
@@ -35991,7 +36041,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ExtensionsManager = /** @class */ (function () {
@@ -36022,7 +36072,7 @@ exports.default = ExtensionsManager;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var click_drag_1 = __webpack_require__(/*! ./click_drag */ "./sources/ext/click_drag/index.ts");
@@ -36056,7 +36106,7 @@ exports.default = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function default_1(gantt) {
@@ -38335,7 +38385,7 @@ module.exports = function (gantt) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var quickInfo_1 = __webpack_require__(/*! ./quickInfo */ "./sources/ext/quick_info/quickInfo.ts");
@@ -38409,7 +38459,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var QuickInfo = /** @class */ (function () {
@@ -38799,7 +38849,7 @@ exports.QuickInfo = QuickInfo;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tooltipManager_1 = __webpack_require__(/*! ./tooltipManager */ "./sources/ext/tooltip/tooltipManager.ts");
@@ -38858,7 +38908,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var domHelpers = __webpack_require__(/*! ../../core/ui/utils/dom_helpers */ "./sources/core/ui/utils/dom_helpers.js");
@@ -39014,7 +39064,7 @@ exports.Tooltip = Tooltip;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var domEventsScope = __webpack_require__(/*! ../../core/ui/utils/dom_event_scope */ "./sources/core/ui/utils/dom_event_scope.js");
@@ -39162,7 +39212,7 @@ exports.TooltipManager = TooltipManager;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var monitor_1 = __webpack_require__(/*! ./monitor */ "./sources/ext/undo/monitor.ts");
@@ -39295,7 +39345,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var noTrack = {
@@ -39644,7 +39694,7 @@ exports.Monitor = Monitor;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var MAX_UNDO_STEPS = 10;
@@ -40076,7 +40126,7 @@ module.exports = function (supportedExtensions) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale_ar_1 = __webpack_require__(/*! ./locale_ar */ "./sources/locale/locale_ar.ts");
@@ -40160,7 +40210,7 @@ exports.default = default_1;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40234,7 +40284,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40308,7 +40358,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
  @Traducido por Vicente Adria Bohigues - vicenteadria@hotmail.com
@@ -40385,7 +40435,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
 Translation by FreezeSoul
@@ -40467,7 +40517,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40541,7 +40591,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40615,7 +40665,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40689,7 +40739,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40763,7 +40813,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -40837,7 +40887,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
  @Autor Manuel Fernandez Panzuela - www.mfernandez.es
@@ -40918,7 +40968,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
  dhtmlxGantt Persian (Farsi, fa_IR) locale by Mohammad Shokri http://slashsbin.com/
@@ -41024,7 +41074,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41098,7 +41148,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41172,7 +41222,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41246,7 +41296,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
   Translation by Davor
@@ -41324,7 +41374,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41398,7 +41448,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41472,7 +41522,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
  Update 29/12/2015:
@@ -41551,7 +41601,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
  Translation by Genexus Japan Inc.
@@ -41628,7 +41678,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
     Translated by cjkim@dbvalley.com
@@ -41703,7 +41753,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var LocaleManager = /** @class */ (function () {
@@ -41734,7 +41784,7 @@ exports.default = LocaleManager;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41808,7 +41858,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41882,7 +41932,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -41956,7 +42006,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -42030,7 +42080,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
 
@@ -42122,7 +42172,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 /*
     Traducere de Ovidiu Lixandru: http://www.madball.ro
@@ -42199,7 +42249,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -42273,7 +42323,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -42347,7 +42397,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -42421,7 +42471,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
@@ -42498,7 +42548,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
@@ -42575,7 +42625,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var locale = {
@@ -42649,7 +42699,7 @@ exports.default = locale;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 // all builds except for evaluation version get this mockup
@@ -42666,7 +42716,7 @@ exports.default = (function () { });
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+
 
 Object.defineProperty(exports, "__esModule", { value: true });
 // all builds except for evaluation version get this mockup
