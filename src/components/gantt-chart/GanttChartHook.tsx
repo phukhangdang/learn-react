@@ -5,5 +5,12 @@ export function useGanttChart() {
     gantt.deleteLink(event);
   };
 
-  return [deleteLink];
+  const zoom_in = () => {
+    gantt.ext.zoom.zoomIn();
+  };
+  const zoom_out = () => {
+    gantt.ext.zoom.zoomOut();
+  };
+
+  return [deleteLink, zoom_in, zoom_out];
 }
