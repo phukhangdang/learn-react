@@ -2,7 +2,12 @@ import React, { useEffect } from "react";
 import { gantt } from "./dhtmlxgantt";
 import "./gantt-chart-css/dhtmlxgantt.scss";
 
-function GanttChart(props: any) {
+type IProps = {
+  data?: any;
+  onResizeProgress?: any;
+};
+
+function GanttChart(props: IProps) {
   useEffect(() => {
     gantt.init("gantt_here");
     gantt.parse({
@@ -37,7 +42,11 @@ function GanttChart(props: any) {
         { id: 2, source: 2, target: 3, type: "0" },
       ],
     });
-  }, []);
+
+    gantt.onResizeProgress = (event) => {
+      props.onResizeProgress(event);
+    };
+  }, [props]);
 
   return <div id="gantt_here" style={{ width: "100%", height: "100vh" }}></div>;
 }

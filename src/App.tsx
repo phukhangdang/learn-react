@@ -5,7 +5,7 @@ import { UserEdit, UserList } from "./components/crud/user";
 import MyLayout from "./components/layout/MyLayout";
 import routes from "./routes";
 import "./fontawasome";
-import GanttChart from "./view/gantt-chart/GanttChart";
+import GanttChartView from "./view/gantt-chart/GanttChartView";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Route path="/user-edit" element={<UserEdit />}></Route>
       <Route path="/user-edit/:userId" element={<UserEdit />}></Route>
       <Route path="/user-list" element={<UserList />}></Route>
-      <Route path="/gantt-chart" element={<GanttChart />}></Route>
+      <Route path="/gantt-chart" element={<GanttChartView />}></Route>
       {routes.map((route) => (
         <Route
           key={route.route}

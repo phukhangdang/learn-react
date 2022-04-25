@@ -2581,6 +2581,12 @@ export interface GanttStatic {
 	 * @param taskId the task id
 	*/
 	updateTaskAssignments(taskId: number|string): void;
+
+	/**
+	 * emit event
+	 * @param event event
+	*/
+	onResizeProgress(event: any): void;
 }
 
 declare var gantt: GanttStatic;
