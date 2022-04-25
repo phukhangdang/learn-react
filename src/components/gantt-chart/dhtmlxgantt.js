@@ -22541,7 +22541,9 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
 
                       if (column == "add") {
                         // khangdp changes
-                        console.log(config.root_id);
+                        // console.log(config.root_id);
+                        gantt.onAddTask(config.root_id);
+
                         // var mouseEvents = gantt.$services.getService("mouseEvents");
                         // mouseEvents.callHandler("click", "gantt_add", grid.$grid, [e, config.root_id]);
                         return;
@@ -22595,7 +22597,9 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                     "gantt_add",
                     gantt.bind(function (e, id, trg) {
                       // khangdp changes
-                      console.log(id ? id : gantt.config.root_id);
+                      // console.log(id ? id : gantt.config.root_id);
+                      gantt.onAddTask(id ? id : gantt.config.root_id);
+
                       // var config = grid.$getConfig();
                       // if (config.readonly) return;
                       // var item = {};
@@ -35486,7 +35490,8 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                 var drag = getDndState();
 
                 // khangdp changes
-                console.log(drag);
+                // console.log(drag);
+                gantt.onCreateLink(drag);
 
                 if (
                   drag.link_source_id &&
@@ -35813,25 +35818,27 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                     if (id && this.callEvent("onLinkDblClick", [id, e])) {
                       var link = this.getLink(id);
 
-                      // khangdp changes
-                      console.log(link);
-
                       if (this.isReadonly(link)) return;
-                      var title = "";
-                      var question =
-                        this.locale.labels.link +
-                        " " +
-                        this.templates.link_description(this.getLink(id)) +
-                        " " +
-                        this.locale.labels.confirm_link_deleting;
-                      window.setTimeout(
-                        function () {
-                          gantt._dhtmlx_confirm(question, title, function () {
-                            gantt.deleteLink(id);
-                          });
-                        },
-                        this.config.touch ? 300 : 1
-                      );
+
+                      // khangdp changes
+                      // console.log(link);
+                      gantt.onDeleteLink(link);
+
+                      // var title = "";
+                      // var question =
+                      //   this.locale.labels.link +
+                      //   " " +
+                      //   this.templates.link_description(this.getLink(id)) +
+                      //   " " +
+                      //   this.locale.labels.confirm_link_deleting;
+                      // window.setTimeout(
+                      //   function () {
+                      //     gantt._dhtmlx_confirm(question, title, function () {
+                      //       gantt.deleteLink(id);
+                      //     });
+                      //   },
+                      //   this.config.touch ? 300 : 1
+                      // );
                     }
                   }
 
@@ -36623,9 +36630,6 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                 return Math.ceil(duration / inMs[unit]);
               },
               _resize_progress: function _resize_progress(task, shift, drag) {
-                // khangdp changes
-                // console.log(task);
-
                 var coords_x = this._drag_task_coords(task, drag);
 
                 var config = timeline.$getConfig();
@@ -37143,8 +37147,8 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
 
                   // khangdp changes
                   if (drag.mode === config.drag_mode.progress) {
-                    gantt.onResizeProgress(task);
                     // console.log(task);
+                    gantt.onResizeProgress(task);
                   }
                 }
 
@@ -53877,6 +53881,18 @@ Translation of new labels by zwh8800
         var createEventEmitter = function createEventEmitter() {
           return {
             onResizeProgress: function onResizeProgress(event) {
+              return event;
+            },
+
+            onAddTask: function onAddTask(event) {
+              return event;
+            },
+
+            onCreateLink: function onCreateLink(event) {
+              return event;
+            },
+
+            onDeleteLink: function onDeleteLink(event) {
               return event;
             },
           };

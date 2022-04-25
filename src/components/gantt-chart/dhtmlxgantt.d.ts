@@ -2587,6 +2587,24 @@ export interface GanttStatic {
 	 * @param event event
 	*/
 	onResizeProgress(event: any): void;
+
+	/**
+	 * emit event
+	 * @param event event
+	*/
+	onAddTask(event: any): void;
+
+	/**
+	 * emit event
+	 * @param event event
+	*/
+	onCreateLink(event: any): void;
+
+	/**
+	 * emit event
+	 * @param event event
+	*/
+	onDeleteLink(event: any): void;
 }
 
 declare var gantt: GanttStatic;
