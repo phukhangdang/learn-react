@@ -1,19 +1,22 @@
 import React, { useEffect } from "react";
 import { gantt } from "./dhtmlxgantt";
+// import "./gantt-chart-css/skins/dhtmlxgantt_material.scss";
 import "./gantt-chart-css/dhtmlxgantt.scss";
-import { useGanttChart } from "./GanttChartHook";
+import "./gantt-chart-css/dhtmlxgantt.custom.scss";
+import { useGanttChartZoom } from "./GanttChartHook";
 
 type IProps = {
   data?: any;
-  onResizeProgress?: any;
   onAddTask?: any;
+  onEditTask?: any;
+  onChangeTask?: any;
   onCreateLink?: any;
   onDeleteLink?: any;
-  deleteLink?: any;
 };
 
 function GanttChart(props: IProps) {
-  const [deleteLink, zoomIn, zoomOut] = useGanttChart();
+  const [zoomIn, zoomOut, toggleFullscreen, openAll, closeAll] =
+    useGanttChartZoom();
 
   useEffect(() => {
     var zoomConfig = {
@@ -165,17 +168,25 @@ function GanttChart(props: IProps) {
 
     gantt.ext.zoom.setLevel("day");
 
+    gantt.plugins({
+      fullscreen: true,
+    });
+
     gantt.init("gantt_here");
 
     if (props.data) {
       gantt.parse(props.data);
 
-      gantt.onResizeProgress = (event) => {
-        props.onResizeProgress(event);
-      };
-
       gantt.onAddTask = (event) => {
         props.onAddTask(event);
+      };
+
+      gantt.onEditTask = (event) => {
+        props.onEditTask(event);
+      };
+
+      gantt.onChangeTask = (event) => {
+        props.onChangeTask(event);
       };
 
       gantt.onCreateLink = (event) => {
@@ -189,13 +200,30 @@ function GanttChart(props: IProps) {
   }, [props]);
 
   return (
-    <>
-      <div className="gantt_control">
-        <input type="button" value="Zoom In" onClick={zoomIn} />
-        <input type="button" value="Zoom Out" onClick={zoomOut} />
+    <div className="gantt-container">
+      <div className="gantt_control gantt-control">
+        <div className="gantt-control-button-container">
+          <button className="gantt-control-button" onClick={closeAll}>
+            Collapse All
+          </button>
+          <button className="gantt-control-button" onClick={openAll}>
+            Expand All
+          </button>
+          <button className="gantt-control-button pkd-ml-auto" onClick={zoomIn}>
+            Zoom In
+          </button>
+          <button className="gantt-control-button" onClick={zoomOut}>
+            Zoom Out
+          </button>
+          <button className="gantt-control-button" onClick={toggleFullscreen}>
+            Fullscreen
+          </button>
+        </div>
       </div>
-      <div id="gantt_here" style={{ width: "100%", height: "100vh" }}></div>
-    </>
+      <div className="gantt-chart-container">
+        <div id="gantt_here" className="gantt-chart"></div>
+      </div>
+    </div>
   );
 }
 

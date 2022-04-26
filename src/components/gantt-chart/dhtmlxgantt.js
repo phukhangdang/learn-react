@@ -29929,16 +29929,23 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                   gantt.callEvent("onTaskDblClick", [id, e]);
 
                 if (res) {
-                  var default_action = callEventHandlers(handlers, e, id);
-                  if (!default_action) return;
+                  // khangdp changes
+                  // var default_action = callEventHandlers(handlers, e, id);
+                  // if (!default_action) return;
 
-                  if (id !== null && gantt.getTask(id)) {
-                    if (
-                      res &&
-                      gantt.config.details_on_dblclick &&
-                      !gantt.isReadonly(id)
-                    ) {
-                      gantt.showLightbox(id);
+                  if (id !== null) {
+                    var task = gantt.getTask(id);
+                    if (task) {
+                      // khangdp changes
+                      gantt.onEditTask(task);
+
+                      // if (
+                      //   res &&
+                      //   gantt.config.details_on_dblclick &&
+                      //   !gantt.isReadonly(id)
+                      // ) {
+                      //   gantt.showLightbox(id);
+                      // }
                     }
                   }
                 }
@@ -37148,7 +37155,17 @@ To use dhtmlxGantt in non-GPL projects (and get Pro version of the product), ple
                   // khangdp changes
                   if (drag.mode === config.drag_mode.progress) {
                     // console.log(task);
-                    gantt.onResizeProgress(task);
+                    gantt.onChangeTask(task);
+                  }
+
+                  if (drag.mode === config.drag_mode.move) {
+                    // console.log(task);
+                    gantt.onChangeTask(task);
+                  }
+
+                  if (drag.mode === config.drag_mode.resize) {
+                    // console.log(task);
+                    gantt.onChangeTask(task);
                   }
                 }
 
@@ -53880,11 +53897,15 @@ Translation of new labels by zwh8800
       function(module, exports, __webpack_require__) {
         var createEventEmitter = function createEventEmitter() {
           return {
-            onResizeProgress: function onResizeProgress(event) {
+            onAddTask: function onAddTask(event) {
               return event;
             },
 
-            onAddTask: function onAddTask(event) {
+            onEditTask: function onEditTask(event) {
+              return event;
+            },
+
+            onChangeTask: function onChangeTask(event) {
               return event;
             },
 

@@ -3,11 +3,15 @@ import { useGanttChart } from "../../components/gantt-chart/GanttChartHook";
 export function useGanttChartViewHook() {
   const [deleteLink] = useGanttChart();
 
-  const handleResizeProgress = (event: any) => {
+  const handleAddTask = (event: any) => {
     console.log(event);
   };
 
-  const handleAddTask = (event: any) => {
+  const handleEditTask = (event: any) => {
+    console.log(event);
+  };
+
+  const handleChangeTask = (event: any) => {
     console.log(event);
   };
 
@@ -22,8 +26,9 @@ export function useGanttChartViewHook() {
   };
 
   return [
-    handleResizeProgress,
     handleAddTask,
+    handleEditTask,
+    handleChangeTask,
     handleCreateLink,
     handleDeleteLink,
   ];

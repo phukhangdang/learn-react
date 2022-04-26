@@ -1,0 +1,53 @@
+// layout
+.gantt-container {
+  height: 100%;
+  width: 100%;
+
+  .gantt-control {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50px;
+
+    .gantt-control-button-container {
+      display: flex;
+      // justify-content: flex-end;
+
+      .gantt-control-button {
+        font: 500 14px inherit;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        background: #fff;
+        padding: 4px 12px;
+        margin: 10px 5px;
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 20px;
+      }
+    }
+  }
+
+  .gantt-chart-container {
+    height: calc(100% - 50px);
+    width: 100%;
+
+    .gantt-chart {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// custom gantt
+.gantt_task_line.gantt_dependent_task {
+  background-color: #65c16f;
+  border: 1px solid #3c9445;
+}
+
+.gantt_task_line.gantt_dependent_task .gantt_task_progress {
+  background-color: #46ad51;
+}
+
+// khangdp
+.pkd-ml-auto {
+  margin-left: auto !important;
+}
